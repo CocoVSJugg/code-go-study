@@ -7,4 +7,5 @@ import (
 func main() {
 	study_lib.MyPrintln("hello lib ")
 	study_lib.MyPrintln01("hello lib 01")
+
 }
