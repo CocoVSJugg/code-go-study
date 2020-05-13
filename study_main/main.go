@@ -1,13 +1,35 @@
 package main
 
 import (
-	"study_lib"
+	"fmt"
 )
 
+type Interface interface {
+	GetStart()
+}
+
+type Implements struct {
+}
+
+func (impl *Implements) GetStart() {
+	fmt.Println("======")
+}
+
+func Test(intf Interface) {
+
+	// _, ok := intf.(Implements)
+	// if ok {
+	// 	fmt.Println("++++++")
+	// } else {
+	// 	fmt.Println("------")
+	// }
+}
+
 func main() {
-	study_lib.MyPrintln("hello lib ")
-	study_lib.MyPrintln01("hello lib 01")
-	study_lib.MyPrintln01("hello lib 02")
-	study_lib.MyPrintln01("hello lib 03")
-	study_lib.MyPrintln("hello lib 04")
+
+	var intf Interface
+	//intf = new(Implements)
+	intf = &Implements{}
+	Test(intf)
+
 }
